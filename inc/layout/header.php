@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vagner Ferreira Santos | Admin</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/portfolio/public/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/portfolio/public/assets/css/bootstrap-theme.css">
   </head>
   <body>
     <div class="container-fluid">
@@ -38,7 +38,7 @@
       <div class="row">
         <div class="jumbotron">
           <div class="container">
-            <h2><a href="admin.php">Painel de administração</a></h2>
+            <h2><a href="/portfolio/public/admin.php">Painel de administração</a></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur repellat modi sint, debitis harum! Unde quidem tempora, dolorum dicta rem veritatis est, consequatur numquam facilis ipsa fugit illum voluptate deleniti!</p>
           </div>
         </div>
