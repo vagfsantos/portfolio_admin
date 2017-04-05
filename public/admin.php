@@ -1,45 +1,55 @@
 <?php include "../inc/layout/header.php"; ?>
+<?php include "../inc/layout/greetings.php"; ?>
 
 <div class="row">
-  <div class="container">
+    <div class="container">
 
+        <div id="projects" class="panel panel-primary">
+            <div class="panel-heading">Projetcs</div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="add/project.php" role="button">
+                    <span class="glyphicon glyphicon-plus"></span> new
+                </a>
+            </div>
+        </div>
 
-    <div id="projetos" class="panel panel-primary">
-      <div class="panel-heading">Projetos</div>
-      <div class="panel-body">
-        Empty
-      </div>
+        <div id="skills" class="panel panel-primary">
+            <div class="panel-heading">Skills</div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="add/project.php" role="button">
+                    <span class="glyphicon glyphicon-plus"></span> new
+                </a>
+            </div>
+        </div>
+
+        <div id="education" class="panel panel-primary">
+            <div class="panel-heading">Education</div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="add/project.php" role="button">
+                    <span class="glyphicon glyphicon-plus"></span> new
+                </a>
+            </div>
+        </div>
+
+        <div id="certified" class="panel panel-primary">
+            <div class="panel-heading">Certifieds</div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="add/project.php" role="button">
+                    <span class="glyphicon glyphicon-plus"></span> new
+                </a>
+            </div>
+        </div>
+
+        <div id="experience" class="panel panel-primary">
+            <div class="panel-heading">Experience</div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="add/project.php" role="button">
+                    <span class="glyphicon glyphicon-plus"></span> new
+                </a>
+            </div>
+        </div>
+
     </div>
-
-    <div id="habilidades" class="panel panel-primary">
-      <div class="panel-heading">Habilidades</div>
-      <div class="panel-body">
-        Empty
-      </div>
-    </div>
-
-    <div id="educacao" class="panel panel-primary">
-      <div class="panel-heading">Educação</div>
-      <div class="panel-body">
-        Empty
-      </div>
-    </div>
-
-    <div id="certificado" class="panel panel-primary">
-      <div class="panel-heading">Certificado</div>
-      <div class="panel-body">
-        Empty
-      </div>
-    </div>
-
-    <div id="experiencia" class="panel panel-primary">
-      <div class="panel-heading">Experiência</div>
-      <div class="panel-body">
-        Empty
-      </div>
-    </div>
-
-  </div>
 </div>
 
 
