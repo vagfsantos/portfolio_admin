@@ -31,12 +31,12 @@
             <label for="large_url">Large Image Url</label>
             <input name="large_url" type="text" class="form-control" id="large_url" placeholder="Large Image Url">
         </div>
-        
+
         <div class="form-group">
             <label for="model">Model</label>
             <input name="model" type="text" class="form-control" id="model" placeholder="Model">
         </div>
-        
+
         <div class="form-group">
             <label for="year">Year</label>
             <input name="year" type="text" class="form-control" id="year" placeholder="dddd" value="<?php echo date('Y')?>">
@@ -46,28 +46,28 @@
             <label for="site_url">Site URL</label>
             <input name="site_url" type="text" class="form-control" id="site_url" placeholder="Site URL">
         </div>
-        
+
         <div class="form-group">
             <label for="code_url">Code URL</label>
             <input name="code_url" type="text" class="form-control" id="code_url" placeholder="Code URL">
         </div>
-        
+
         <div class="form-group">
             <label for="work_done">What did I do?</label>
             <textarea name="work_done" class="form-control" id="work_done" placeholder="What did I do?"></textarea>
         </div>
-        
+
         <div class="form-group">
             <label for="copyright">Copyright</label>
-            <textarea name="copyright" class="form-control" id="copyright" placeholder="Copyright"></textarea>
-        </div>
-        
-        <div class="form-group">
-            <label for="copyright_url">Copyright Reference</label>
-            <textarea name="copyright_url" class="form-control" id="copyright_url" placeholder="Copyright Reference"></textarea>
+            <input name="copyright" type="text" class="form-control" id="copyright" placeholder="Copyright">
         </div>
 
-        <button name="submit" type="submit" class="btn btn-default">Submit</button>
+        <div class="form-group">
+            <label for="copyright_url">Copyright Reference</label>
+            <input name="copyright_url" type="text" class="form-control" id="copyright_url" placeholder="Copyright Reference">
+        </div>
+
+        <button name="submit" type="submit" type="text" class="btn btn-default">Submit</button>
     </form>
 </div>
 
