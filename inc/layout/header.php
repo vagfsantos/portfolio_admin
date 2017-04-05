@@ -9,7 +9,7 @@
     
     <style>
         body{
-            padding-top: 50px;
+            padding-top: 80px;
         }
     </style>
   </head>
