@@ -2,7 +2,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/validation_utils.php"; ?>
 
 <?php
-
 $form_submit = getPostVar('submit');
 
 // if it wasn't sent by a form
@@ -11,6 +10,14 @@ if( !$form_submit ){
     exit;
 }
 
+// required values
+validate_required_fields($_POST);
+
+if( isset($errors) ){
+    echo display_errors();
+}else{
+    echo "valid";
+}
 
 // Form data storage
 $title = getPostVar('title');

@@ -67,7 +67,7 @@
             <input name="copyright_url" type="text" class="form-control" id="copyright_url" placeholder="Copyright Reference">
         </div>
 
-        <button name="submit" type="submit" type="text" class="btn btn-default">Submit</button>
+        <input name="submit" type="submit" type="text" class="btn btn-default" value="submit">
     </form>
 </div>
 
