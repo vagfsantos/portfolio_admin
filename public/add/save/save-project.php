@@ -1,4 +1,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/connection.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/session.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/functions.php"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/validation_utils.php"; ?>
 
 <?php
@@ -13,8 +15,8 @@ if( !$form_submit ){
 // required values
 validate_required_fields($_POST);
 
-if( isset($errors) ){
-    echo display_errors();
+if( isset($_SESSION['errors']) ){
+    redirect_to('../project.php');
 }else{
     echo "valid";
 }

@@ -1,6 +1,17 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/layout/header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/session.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/functions.php"; ?>
+
 
 <div class="col-md-6 col-md-offset-3">
+    <?php // check if exists errors to display ?>
+    <?php if( has_errors() ) : ?>
+    <div class="alert alert-danger" role="alert">
+        <?php echo display_errors(); ?>  
+    </div>
+    <?php flush_data_from('errors'); ?>
+    <?php endif; ?>
+
     <form method="post" action="save/save-project.php">
         <div class="form-group">
             <label for="title">Project Title</label>
