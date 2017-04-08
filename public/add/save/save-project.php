@@ -12,15 +12,7 @@ if( !$form_submit ){
     exit;
 }
 
-// required values
-validate_required_fields($_POST);
-
-if( isset($_SESSION['errors']) ){
-    redirect_to('../project.php');
-}else{
-    echo "valid";
-}
-
+// ## CATCHING DATA
 // Form data storage
 $title = getPostVar('title');
 $type = getPostVar('type');
@@ -36,8 +28,19 @@ $copyright = getPostVar('copyright');
 $copyright_url = getPostVar('copyright_url');
 
 
-// Form data validation
+// ## FORM VALIDATION
+// required values
+validate_required_fields($_POST);
 
+// verify year
+validate_is_year($year);
+
+// ## REDIRECT
+if( isset($_SESSION['errors']) ){
+    redirect_to('../project.php');
+}else{
+    echo "valid";
+}
 
 // insert query
 $query = 'INSERT INTO projects';

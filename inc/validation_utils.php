@@ -16,4 +16,13 @@ function validate_required_fields($array){
     }
 }
 
+// check if the input is in an year format
+// returns true if so
+function validate_is_year($input){
+    $pattern = '/^\d{4}$/';
+    $is_year = preg_match($pattern, $input, $matches, PREG_OFFSET_CAPTURE);
+    if( !$is_year ) {
+        $_SESSION['errors'][] = "The field year, Must follow the pattern 'dddd'";
+    }
+}
 ?>
