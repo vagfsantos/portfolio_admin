@@ -1,6 +1,30 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/layout/header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/connection.php"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/session.php"; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/portfolio/inc/functions.php"; ?>
+
+
+
+<?php
+
+$is_edit_mode = get_get_var('edit');
+
+if( $is_edit_mode ){
+    $query = "SELECT * FROM projects";
+    
+    $results = mysqli_query($connection, $query);
+    while( $data = mysqli_fetch_assoc($results) ){
+        foreach( $data as $field => $value ){
+            echo "{$field} ====== {$value}";
+            echo "<br>";
+        }
+        
+        echo "<br>";
+        echo "<br>";
+    }
+}
+?>
+
 
 
 <div class="col-md-6 col-md-offset-3">
@@ -34,13 +58,13 @@
         </div>
 
         <div class="form-group">
-            <label for="thumb_url">Thumb Url</label>
-            <input name="thumb_url" type="text" class="form-control" id="thumb_url" placeholder="Thumb Url">
+            <label for="img_thumb_url">Thumb Url</label>
+            <input name="img_thumb_url" type="text" class="form-control" id="img_thumb_url" placeholder="Thumb Url">
         </div>
 
         <div class="form-group">
-            <label for="large_url">Large Image Url</label>
-            <input name="large_url" type="text" class="form-control" id="large_url" placeholder="Large Image Url">
+            <label for="img_large_url">Large Image Url</label>
+            <input name="img_large_url" type="text" class="form-control" id="img_large_url" placeholder="Large Image Url">
         </div>
 
         <div class="form-group">
@@ -49,8 +73,8 @@
         </div>
 
         <div class="form-group">
-            <label for="year">Year</label>
-            <input name="year" type="text" class="form-control" id="year" placeholder="dddd" value="<?php echo date('Y')?>">
+            <label for="time_year">Year</label>
+            <input name="time_year" type="text" class="form-control" id="year" placeholder="dddd" value="<?php echo date('Y')?>">
         </div>
 
         <div class="form-group">

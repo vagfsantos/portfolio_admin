@@ -27,11 +27,22 @@ function display_errors(){
 
 // flush data from a $_SESSION
 // it requires the field to empty
-
 function flush_data_from($key){
     if( isset($_SESSION[$key]) ){
         $_SESSION[$key] = null;
     }
+}
+
+// get GET datas
+// return empty string or the GET value
+function get_get_var($name){
+    return isset($_GET[$name]) ? $_GET[$name] : '';
+}
+
+// get post datas
+// return empty string or the post value
+function get_post_var($name){
+    return isset($_POST[$name]) ? $_POST[$name] : '';
 }
 
 ?>

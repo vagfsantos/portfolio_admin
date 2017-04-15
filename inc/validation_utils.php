@@ -1,17 +1,30 @@
 <?php
+function get_all_post_vars(){
+    $newArray = [];
+    foreach( $_POST as $field => $value ){
+        $newArray[$field] = $value ? $value : '';
+    }
+    
+    return $newArray;
+}
 
-// get post datas
-// return empty string or the post value
-function getPostVar($name){
-    return $_POST[$name] ? $_POST[$name] : '';
+function validate_prepare_to_database($array){
+    global $connection;
+    $scapedArray = [];
+    
+    foreach( $array as $key => $val ){
+        $scapedArray[$key] = mysqli_real_escape_string($connection, $val);
+    }
+    
+    return $scapedArray;
 }
 
 // check if existes empty required values
 // returns null
 function validate_required_fields($array){
-    foreach( $array as $field => $key ){
-        if( empty( $field[$key] ) ){
-            $_SESSION['errors'][] = "The field {$field}, can't be empty";
+    foreach( $array as $key => $value ){
+        if( empty( $array[$key] ) ){
+            $_SESSION['errors'][] = "The field {$key}, can't be empty";
         }
     }
 }
